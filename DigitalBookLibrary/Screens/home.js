@@ -68,7 +68,7 @@ borderRadius:10,
 
       <View style = {{
         flex:3.5,
-        
+        backgroundColor:'white'
 
       }}>
       
@@ -106,6 +106,9 @@ borderRadius:10,
             </Text>
             </TouchableOpacity>
         </View>
+
+
+            
 
 
       
