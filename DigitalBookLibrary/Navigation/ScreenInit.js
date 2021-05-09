@@ -30,7 +30,7 @@ Stack.Navigator.defaultProps = {
 function MyStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Signin">
+      <Stack.Navigator initialRouteName="SignIn">
         <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="Bookdetails" component={Bookdetails} />
         <Stack.Screen name="Download" component={Download} />
