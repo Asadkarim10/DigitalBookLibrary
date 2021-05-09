@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View,Linking, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-
 class SignIn extends Component {
-  render() {
+  render(props) {
     return (
       <View style={{
         flex: 1,
@@ -149,7 +148,8 @@ class SignIn extends Component {
             marginRight: 10,
             marginTop: 10
           }}>
-            <TouchableOpacity style={{
+            <TouchableOpacity  onPress={() => this.props.navigation.navigate("home")} 
+             style={{
               width: wp("30%"),
               borderRadius: 15,
               backgroundColor: '#787bf4',
@@ -182,7 +182,8 @@ class SignIn extends Component {
           justifyContent: 'center'
         }}>
 
-          <TouchableOpacity style={{
+          <TouchableOpacity  onPress= {()=> Linking.openURL("https://www.google.com/")}  
+          style={{
             width: wp("95%"),
             borderWidth: 1,
             flexDirection: 'row',
@@ -214,7 +215,9 @@ class SignIn extends Component {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{
+          <TouchableOpacity onPress= {()=> Linking.openURL("https://www.facebook.com/")} 
+          
+          style={{
             width: wp("95%"),
             borderWidth: 1,
             flexDirection: 'row',
@@ -258,7 +261,7 @@ class SignIn extends Component {
           <Text style={{
             fontWeight: "700"
           }}>Dont Have an Account ?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
             <Text style={{
               color: '#8363d5',
               fontWeight: 'bold',

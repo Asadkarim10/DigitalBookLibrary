@@ -5,7 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Zocial from 'react-native-vector-icons/Zocial';
 import Entypo from 'react-native-vector-icons/Entypo'
 class SignUp extends Component {
-  render() {
+  render(props) {
     return (
       <View style = {{
         flex:1,
@@ -269,7 +269,9 @@ class SignUp extends Component {
                marginRight:10,
                marginTop:40
              }}> 
-            <TouchableOpacity style = {{
+            <TouchableOpacity 
+              onPress={() => this.props.navigation.navigate("home")}
+            style = {{
               width:wp("30%"),
               borderRadius:15,
               height:45,
@@ -299,7 +301,7 @@ class SignUp extends Component {
               <Text style = {{
                  fontWeight: "700"
               }}>If you Have An Account ?</Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate("SignIn")}>
                 <Text style = {{
                   color: '#8363d5',
                   fontWeight: 'bold',
