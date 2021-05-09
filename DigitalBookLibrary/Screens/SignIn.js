@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View,Linking, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View,Linking,KeyboardAvoidingView ,Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -7,10 +7,9 @@ import Entypo from 'react-native-vector-icons/Entypo';
 class SignIn extends Component {
   render(props) {
     return (
-      <View style={{
-        flex: 1,
-        backgroundColor: "white"
-      }}>
+      <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}>
 
         <View style={{
           flexDirection: 'row',
@@ -271,9 +270,35 @@ class SignIn extends Component {
         </View>
 
 
-      </View>
+        </KeyboardAvoidingView>
     );
   }
 }
 
 export default SignIn;
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  inner: {
+    padding: 24,
+    flex: 1,
+    justifyContent: "space-around"
+  },
+  header: {
+    fontSize: 36,
+    marginBottom: 48
+  },
+  textInput: {
+    height: 40,
+    borderColor: "#000000",
+    borderBottomWidth: 1,
+    marginBottom: 36
+  },
+  btnContainer: {
+    backgroundColor: "white",
+    marginTop: 12
+  }
+});
