@@ -23,7 +23,7 @@ class SignIn extends Component {
           <Text style={{
             fontSize: 30,
             fontWeight: 'bold',
-            color: "#656965"
+            color: "#6d6e70"
           }}>Digital Book Library</Text>
         </View>
 
@@ -35,14 +35,14 @@ class SignIn extends Component {
 
           <View style={{
             flexDirection: 'row',
-            width: wp('96%'),
+            width: wp('90%'),
             justifyContent: 'flex-start',
             alignSelf: 'center',
             height: 45
           }}>
             <Text style={{
-              fontSize: 15,
-              fontWeight: 'bold',
+              fontSize: 19,
+              fontWeight: '700',
               color: '#92746b'
             }}>
               Sign in to continue
@@ -50,69 +50,104 @@ class SignIn extends Component {
           </View>
           <View style={{
             width: wp("95%"),
+            height:70,
             alignSelf: 'center',
             borderBottomWidth: 1,
             borderBottomColor: '#919193',
             flexDirection: 'row',
             justifyContent: 'flex-start',
-            alignItems: 'center'
+            alignItems: 'flex-end',
+            alignContent:'flex-end'
           }}>
+            
+            <View style = {{
+              width:wp('15%'),
+              height:42,
+              alignSelf:'center',
+              flexDirection:'row',
+              justifyContent:'center',
+              alignItems:'flex-end',
+            }}>
 
-            <FontAwesome5 name="user-alt" size={30} color="#767678" />
-
+            <FontAwesome5 name="user-alt" size={25} color="#767678" />
+            </View>
+              <View style = {{ width:wp("80%")}}>
             <TextInput placeholder={"User Name"} style={{
-              paddingLeft: 15,
-              fontSize: 15
+              paddingLeft: 10,
+              fontSize: 19,
             }} />
+            </View>
+            
 
           </View>
 
           <View style={{
             width: wp("95%"),
-            marginTop: 20,
+            height:90,
             alignSelf: 'center',
             borderBottomWidth: 1,
             borderBottomColor: '#919193',
             flexDirection: 'row',
             justifyContent: 'flex-start',
-            alignItems: 'center'
+            alignItems: 'flex-end',
+            alignContent:'flex-end'
           }}>
+            
+            <View style = {{
+              width:wp('15%'),
+              height:62,
+              alignSelf:'center',
+              flexDirection:'row',
+              justifyContent:'center',
+              alignItems:'flex-end',
+   
+              
+            }}>
 
-            <FontAwesome5 name="lock" size={30} color="#767678" />
-
+            <Entypo 
+ name="lock" size={25} color="#767678" />
+            </View>
+              <View style = {{ width:wp("80%")}}>
             <TextInput placeholder={"Password"} style={{
-              paddingLeft: 15,
-              fontSize: 15
+              paddingLeft: 10,
+              fontSize: 19,
             }} />
-
+            </View>
           </View>
 
           <View style={{
             flexDirection: 'row',
             justifyContent: 'flex-start',
-            width: wp("95%"),
-            alignSelf: 'center',
+            width: wp("66%"),
+            marginLeft:25,
             height: 40,
             alignContent: 'center',
             alignItems: 'center'
           }}>
-            <Entypo name="lock" size={30} color="#767678" />
+           
+            <Entypo name="eye" size={25} color="#767678" />
+            
+
+              
+
             <Text style={{
-              fontSize: 15,
+              fontSize: 17,
+              marginLeft:16,
               color: '#bcb4e5'
             }}>Remember password</Text>
+         
           </View>
+
         </View>
 
         <View style={{
           flex: 1,
         }}>
-
           <View style={{
             flexDirection: 'row',
             justifyContent: 'flex-end',
             marginRight: 10,
-            marginTop: -10
+            marginTop: 10
           }}>
             <TouchableOpacity style={{
               width: wp("30%"),
@@ -121,8 +156,6 @@ class SignIn extends Component {
               height: 45,
               alignItems: 'center',
               justifyContent: 'center',
-
-
             }}>
               <Text style={{
                 fontWeight: '700',
@@ -162,14 +195,24 @@ class SignIn extends Component {
             borderColor: "#acafc2"
           }
           }>
-            <Entypo name="google--with-circle" size={30} color="#787bf4" />
-            <Text style={{
-              paddingLeft: 20,
-              color: "#919191",
-              fontSize: 18
-            }}>Login With Google</Text>
-          </TouchableOpacity>
 
+            <View style = {{
+              flexDirection:'row',
+              width:wp('10%'),
+              justifyContent:"space-between",
+              alignItems:'center'
+            }}>
+            <Entypo name="google--with-circle" size={30} color="#787bf4" />
+    </View>
+              <View>
+            <Text style={{
+              paddingLeft:20,
+              color: "#919191",
+              fontSize: 18,
+              
+            }}>Login With Google</Text>
+            </View>
+          </TouchableOpacity>
 
           <TouchableOpacity style={{
             width: wp("95%"),
@@ -184,12 +227,24 @@ class SignIn extends Component {
             borderColor: "#acafc2"
           }
           }>
+
+            <View style = {{
+              flexDirection:'row',
+              width:wp('10%'),
+              paddingLeft:10,
+              justifyContent:"space-between",
+              alignItems:'center'
+            }}>
             <Entypo name="facebook-with-circle" size={30} color="#787bf4" />
+    </View>
+              <View>
             <Text style={{
-              paddingLeft: 20,
+              paddingLeft:25,
               color: "#919191",
-              fontSize: 18
+              fontSize: 18,
+              
             }}>Login With Facebook</Text>
+            </View>
           </TouchableOpacity>
 
         </View>
