@@ -3,13 +3,13 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import AboutDish from '../Screens/home'
+import AboutDish from '../Screens/AboutDish'
 import ChoseDish from '../Screens/choseDish';
-import Signin from '../Screens/signin';
-import Signup from '../Screens/SignUp';
+import SignIn from '../Screens/signin';
+import SignUp from '../Screens/signUp';
 import WelcomeChef from '../Screens/welcomeChef'
-
-
+import Home from '../Screens/home'
+import IndianCuisine from '../Screens/IndianCuisine'
 
 
 
@@ -37,6 +37,8 @@ function MyStack() {
         <Stack.Screen name="IndianCuisine" component={IndianCuisine} />
         <Stack.Screen name="signin" component={SignIn} />
         <Stack.Screen name="signUp" component={SignUp} />
+        <Stack.Screen name="welcomeChef" component={WelcomeChef} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
