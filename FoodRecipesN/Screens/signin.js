@@ -3,7 +3,7 @@ import { Text, TextInput, View, Image, ScrollView, StyleSheet, TouchableOpacity 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class SignIn extends Component {
-  render() {
+  render(Props) {
     return (
 
       <View style={{
@@ -53,7 +53,8 @@ class SignIn extends Component {
       
         }}>
           
-<TouchableOpacity style = {{
+<TouchableOpacity onPress={() => this.props.navigation.navigate('IndianCuisine')} 
+ style = {{
   width:wp('95%'),
   alignSelf:'center',
   borderWidth:1,
@@ -80,7 +81,8 @@ class SignIn extends Component {
   marginBottom:10
 }}>Or</Text>
 
-<TouchableOpacity style = {{
+<TouchableOpacity 
+style = {{
   width:wp('95%'),
   alignSelf:'center',
   borderWidth:1,
