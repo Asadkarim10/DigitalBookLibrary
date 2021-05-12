@@ -3,7 +3,7 @@ import { Text,TextInput, View, Image, ScrollView,StyleSheet, TouchableOpacity } 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class Home extends Component {
-  render() {
+  render(props) {
     return (
         <View style = {{
             flex:1,
@@ -33,7 +33,7 @@ class Home extends Component {
             <TouchableOpacity style = {{
               width:wp('96%'),
               borderRadius:20,
-              height:40,
+              height:45,
               alignContent:'center',
               justifyContent:'center',
               alignItems:'center',
@@ -43,18 +43,21 @@ class Home extends Component {
             }}>
         
         <Text style = {{
-          fontSize:20,
+          fontSize:18,
           color:'white'
         }}>Login</Text>
 
             </TouchableOpacity>
 
            
-            <TouchableOpacity style = {{
+            <TouchableOpacity  onPress={() => this.props.navigation.navigate('signUp')}
+
+            
+            style = {{
               width:wp('96%'),
               borderRadius:20,
               marginTop:20,
-              height:40,
+              height:45,
               alignContent:'center',
               justifyContent:'center',
               alignItems:'center',
@@ -65,7 +68,7 @@ class Home extends Component {
             }}>
         
         <Text style = {{
-          fontSize:20,
+          fontSize:18,
           color:'black'
         }}>SignUp</Text>
 
