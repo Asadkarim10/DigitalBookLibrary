@@ -4,7 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 
 class IndianCuisine extends Component {
-  render() {
+  render(props) {
     return (
       <View style = {{
         flex:1,
@@ -36,7 +36,9 @@ class IndianCuisine extends Component {
         width:wp('92%'),
         alignSelf:'center'
       }}>
-        <TouchableOpacity style = {{
+        <TouchableOpacity  
+          onPress={() => this.props.navigation.navigate('welcomeChef')}
+        style = {{
           height:35,
           backgroundColor:'#ba4363',
           width:wp('40%'),
@@ -55,7 +57,8 @@ class IndianCuisine extends Component {
           alignSelf:'center'
         }}>
           <Text style = {{
-            fontSize:17
+            fontSize:18,
+            fontWeight:'bold'
           }}>Indian Food Categories</Text>
         </View>
 
@@ -78,7 +81,8 @@ class IndianCuisine extends Component {
             }}>
 
             <Text style = {{
-              alignSelf:'center'
+              alignSelf:'center',
+              fontWeight:'bold'
             }}>Appetizer's</Text>
 
 
@@ -98,7 +102,8 @@ class IndianCuisine extends Component {
             }}>
 
             <Text style = {{
-              alignSelf:'center'
+              alignSelf:'center',
+              fontWeight:'bold'
             }}>Entree's</Text>
 
 
@@ -111,6 +116,7 @@ class IndianCuisine extends Component {
               borderRadius:6,
               borderWidth:1,
               borderColor:"#feffbd",
+              
               width:wp('40%'),
               marginTop:15,
               justifyContent:'center',
@@ -119,7 +125,8 @@ class IndianCuisine extends Component {
             }}>
 
             <Text style = {{
-              alignSelf:'center'
+              alignSelf:'center',
+              fontWeight:'bold'
             }}>Biryani's</Text>
 
 

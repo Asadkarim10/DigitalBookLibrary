@@ -47,8 +47,6 @@ function MyStack() {
 const SettingStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-    <Stack.Screen name="heartylunch" component={Heartylunch} />
-    <Stack.Screen name="weightLossTips" component={WeightLossTips} />
     </Stack.Navigator>
   );
 }

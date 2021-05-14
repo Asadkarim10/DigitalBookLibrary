@@ -3,7 +3,7 @@ import { Text,TextInput, View, Image, ScrollView,StyleSheet, TouchableOpacity } 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class WelcomeChef extends Component {
-  render() {
+  render(props) {
     return (
 
       <View style = {{
@@ -41,7 +41,9 @@ class WelcomeChef extends Component {
   
 }} >
 
-<TouchableOpacity style = {{
+<TouchableOpacity  
+ onPress={() => this.props.navigation.navigate('AboutDish')}
+style = {{
   width:wp('95%'),
   alignSelf:'center',
   borderWidth:1,

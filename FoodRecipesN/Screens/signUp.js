@@ -3,7 +3,7 @@ import { Text,TextInput, View, Image, ScrollView,StyleSheet, TouchableOpacity } 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class SignUp extends Component {
-  render() {
+  render(props) {
     return (
 
         <View style = {{
@@ -71,11 +71,13 @@ class SignUp extends Component {
   
 }} >
 
-<TouchableOpacity style = {{
+<TouchableOpacity  onPress={() => this.props.navigation.navigate('signin')}
+
+style = {{
   width:wp('95%'),
   alignSelf:'center',
   borderWidth:1,
-  height:40,
+  height:45,
   alignItems:'center',
   borderRadius:20,
   backgroundColor:"white",
