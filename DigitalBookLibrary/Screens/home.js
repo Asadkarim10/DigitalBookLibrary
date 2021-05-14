@@ -19,7 +19,7 @@ class Home extends Component {
       ]
     };
   }
-  render() {
+  render(props) {
     return (
       <View style = {{
         flex:1
@@ -67,13 +67,15 @@ borderRadius:10,
       </View>
 
       <View style = {{
-        flex:3.5,
-        backgroundColor:'white'
+        flex:4,
+        backgroundColor:'white',
+      
 
       }}>
       
       <SliderBox
   images={this.state.images}
+  sliderBoxHeight={300}
   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
   currentImageEmitter={index => console.warn(`current pos is: ${index}`)}/>
       </View>
