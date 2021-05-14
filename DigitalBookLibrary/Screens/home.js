@@ -108,7 +108,7 @@ borderRadius:10,
             </Text>
             </TouchableOpacity>
         </View>
-        <SwiperComponent />
+        <SwiperComponent navigation={this.props.navigation} />
 
         <View style = {{
           flexDirection:'row',
@@ -137,7 +137,7 @@ borderRadius:10,
             </TouchableOpacity>
             </View>
 
-            <SwiperComponent  />
+            <SwiperComponent navigation={this.props.navigation} />
 
             <View style = {{
           flexDirection:'row',
@@ -160,7 +160,7 @@ borderRadius:10,
             </TouchableOpacity>
             </View>
 
-            <SwiperComponent  />
+            <SwiperComponent navigation={this.props.navigation}  />
 
 
         </ScrollView>

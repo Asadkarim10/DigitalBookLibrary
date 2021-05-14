@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppRegistry,Image, StyleSheet, Text, View } from 'react-native'
+import {TouchableOpacity, AppRegistry,Image, StyleSheet, Text, View } from 'react-native'
 import { widthPercentageToDP } from 'react-native-responsive-screen' 
 import Swiper from 'react-native-swiper'
  
@@ -9,8 +9,7 @@ const styles = StyleSheet.create({
    },
 
 buttonWrapperStyle : {
-    backgroundColor: 'transparent', flexDirection: 'row', position: 'absolute', top: 0, left: 0, flex: 1, paddingHorizontal: 10, paddingVertical: 10, justifyContent: 'space-between', alignItems: 'center'}
-,
+    backgroundColor: 'transparent', flexDirection: 'row', position: 'absolute', top: 0, left: 0, flex: 1, paddingHorizontal: 10, paddingVertical: 10, justifyContent: 'space-between', alignItems: 'center'},
 
   slide1: {
     flex:1,
@@ -34,7 +33,7 @@ buttonWrapperStyle : {
 })
  
 export default class SwiperComponent extends Component {
-  render() {
+  render(props) {
     return (
         <View style = {{
             height:200,
@@ -42,19 +41,49 @@ export default class SwiperComponent extends Component {
         }}>
       <Swiper  showsButtons={true}  >
         <View style={styles.slide1}>
-        <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, marginLeft:20, height:150}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, height:150,  marginLeft:20,}} source={require('../Assets/book.jpg')}/>
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>  
+
+
+     <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>  
+        
+        
+        
         </View>
         <View style={styles.slide2}>
-        <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, marginLeft:20, height:150}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, height:150,  marginLeft:20,}} source={require('../Assets/book.jpg')}/>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>  
+
+
+     <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>
         </View>
         <View style={styles.slide3}>
-        <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, marginLeft:20, height:150}} source={require('../Assets/book.jpg')}/>
-        <Image style = {{ width:80, height:150,  marginLeft:20,}} source={require('../Assets/book.jpg')}/>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>  
+
+
+     <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("Bookdetails")}> 
+       <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+     </TouchableOpacity>
         </View>
       </Swiper>
       </View>
