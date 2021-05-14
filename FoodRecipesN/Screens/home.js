@@ -30,7 +30,10 @@ class Home extends Component {
             alignContent:'center'
         }}>
             
-            <TouchableOpacity style = {{
+            <TouchableOpacity 
+             onPress={() => this.props.navigation.navigate('home')}
+            
+            style = {{
               width:wp('96%'),
               borderRadius:20,
               height:45,
