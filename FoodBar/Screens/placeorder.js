@@ -224,7 +224,7 @@ const Placeorder = () => {
     borderWidth:1,
     marginTop:10,
     borderColor:'#f6f6f6',
-    backgroundColor:'#fcfdfb',
+    backgroundColor:'white',
     shadowColor: "#000",
 shadowOffset: {
 	width: 0,
@@ -273,7 +273,7 @@ elevation: 2,
     borderWidth:1,
     marginTop:10,
     borderColor:'#f6f6f6',
-    backgroundColor:'#fcfdfb',
+    backgroundColor:'white',
     shadowColor: "#000",
 shadowOffset: {
 	width: 0,
@@ -322,13 +322,13 @@ elevation: 2,
                     height:50,
                     flexDirection:'row',
                     alignItems:'center',
-                    justifyContent:'center',
+                    justifyContent:'space-around',
                     width:wp('100%'),
                     
                 }}>
                    
-                   <Text style = {{ color:'white', fontWeight:'900' }}>ADD TO CART</Text>
-                  
+                   <Text style = {{ color:'white', fontWeight:'bold', fontSize:15 }}>PLACE ORDER</Text>
+                   <Text style = {{ color:'white', fontWeight:'bold' , fontSize:15 }}>$65.72</Text>
                 </View>
                 </TouchableOpacity>
 
