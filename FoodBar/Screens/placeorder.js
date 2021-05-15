@@ -106,12 +106,12 @@ const Placeorder = () => {
     color:'#454545',
     fontSize:17,
     fontWeight:'bold'
-}}>321.00</Text>
+}}>3x$0.20 ice lemon tea</Text>
 <Text style = {{
     color:'#454545',
     fontSize:17,
     fontWeight:'bold'
-}}>$63.00</Text>
+}}>$0.60</Text>
 </View>
 
 <View style = {{
@@ -122,11 +122,187 @@ const Placeorder = () => {
     <Text style = {{
         color:'#9e9e9e',
         fontWeight:'bold'
-    }}>Drinks</Text>
+    }}>Desserts & Sides</Text>
+</View>
+
+
+<View style = {{
+    flexDirection:'row',
+    width:wp('95%'),
+    alignSelf:'center',
+    borderBottomWidth:1,
+    borderBottomColor:'#fcfcfc',
+    paddingBottom:17,
+    justifyContent:'space-between'
+}}>
+
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>3x$0.20 corn tea</Text>
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>$1.50</Text>
+</View>
+
+
+<View style = {{
+    height:50,
+    justifyContent:'flex-end',
+    alignItems:'center',
+    flexDirection:'row',
+    marginRight:10
+}}>
+    <TouchableOpacity>
+    <Text>CLEAR CART</Text>
+    </TouchableOpacity>
+</View>
+
+
+<View style = {{
+    flexDirection:'row',
+    width:wp('95%'),
+    alignSelf:'center',
+    borderBottomWidth:1,
+    borderBottomColor:'#fcfcfc',
+    paddingBottom:17,
+    justifyContent:'space-between'
+}}>
+
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>Discount 10%</Text>
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>($6.51)</Text>
+</View>
+
+
+<View style = {{
+    flexDirection:'row',
+    width:wp('95%'),
+    alignSelf:'center',
+    borderBottomWidth:1,
+    borderBottomColor:'#fcfcfc',
+    paddingBottom:17,
+    justifyContent:'space-between'
+}}>
+
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>Sub Total</Text>
+<Text style = {{
+    color:'#454545',
+    fontSize:17,
+    fontWeight:'bold'
+}}>$58.59</Text>
+</View>
+
+
+<View style = {{
+    flexDirection:'row',
+    justifyContent:'space-around'
+}}>
+
+<TextInput placeholder="Enter voucher here" placeholderTextColor="#bdbdbd" style = {{ borderBottomColor:'#bdbdbd', paddingBottom:-28, borderBottomWidth:1, width:wp('60%'), fontSize:17}} />
+
+<TouchableOpacity style = {{
+    width:wp("30%"),
+    height:40,
+    justifyContent:'center',
+    flexDirection:'row',
+    alignItems:'center',
+    borderWidth:1,
+    marginTop:10,
+    borderColor:'#f6f6f6',
+    backgroundColor:'#fcfdfb',
+    shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 1,
+},
+shadowOpacity: 0.5,
+shadowRadius: 1.84,
+
+elevation: 2,
+}}>
+    <Text style = {{
+        color:'#63d38e',
+        fontSize:20,
+        fontWeight:'700'
+    }}>APPLY</Text>
+</TouchableOpacity>
+</View>
+
+<View style = {{
+    height:50,
+    justifyContent:'center'
+}}>
+    <Text style = {{
+        color:'#63d38e',
+        fontWeight:'bold',
+        fontSize:15,
+        marginLeft:10
+    }}>This ordered earned 63 karendaria points</Text>
 </View>
 
 
 
+<View style = {{
+    flexDirection:'row',
+    justifyContent:'space-around'
+}}>
+
+<TextInput placeholder="Redeem Points" placeholderTextColor="#bdbdbd" style = {{ borderBottomColor:'#bdbdbd', paddingBottom:-28, borderBottomWidth:1, width:wp('60%'), fontSize:17}} />
+
+<TouchableOpacity style = {{
+    width:wp("30%"),
+    height:40,
+    justifyContent:'center',
+    flexDirection:'row',
+    alignItems:'center',
+    borderWidth:1,
+    marginTop:10,
+    borderColor:'#f6f6f6',
+    backgroundColor:'#fcfdfb',
+    shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 1,
+},
+shadowOpacity: 0.5,
+shadowRadius: 1.84,
+
+elevation: 2,
+}}>
+    <Text style = {{
+        color:'#63d38e',
+        fontSize:20,
+        fontWeight:'700'
+    }}>REDEEM</Text>
+</TouchableOpacity>
+</View>
+
+<View style = {{
+    height:50,
+    justifyContent:'center'
+}}>
+    <Text style = {{
+        color:'#63d38e',
+        fontWeight:'bold',
+        fontSize:15,
+        marginLeft:10
+    }}>Your available points 193</Text>
+</View>
 
 
 
