@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, TextInput, View, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 const Signin = () => {
@@ -11,8 +11,10 @@ const Signin = () => {
         backgroundColor:'white'
     }}>
         <View style = {{
-            height:50,
-            justifyContent:'center'
+            height:60,
+            justifyContent:'center',
+          
+            
         }}>
 
             <View style = {{
@@ -20,13 +22,13 @@ const Signin = () => {
                 justifyContent:'flex-start',
 
             }}>
-            <Icon name="rocket" size={30} color="#900" />
-            <Icon name="rocket" size={30} color="#900" />
+            <Ionicons name="arrow-back" size={30} color="black" />
+            <Entypo name="user" size={33} color="black" />
             </View>
         </View>
 
         <View style = {{
-            height:60,
+            height:80,
             justifyContent:'center',
             width:wp('98%'),
             alignSelf:'center'
@@ -43,10 +45,15 @@ const Signin = () => {
         </View>
 
 
-        <View>
+        <View style = {{
+            height:140,
+            
+        }}>
             <TextInput 
             style = {{
                 width:wp("98%"),
+                height:60,
+                
                 borderBottomWidth:1,
                 borderBottomColor:"#fcfcfc",
                 fontSize:15,
@@ -58,6 +65,7 @@ const Signin = () => {
             <TextInput style = {{
                 width:wp("98%"),
                 borderBottomWidth:1,
+                height:60,
                 borderBottomColor:"#fcfcfc",
                 fontSize:15,
                 alignSelf:'center'
