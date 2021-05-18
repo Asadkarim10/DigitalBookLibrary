@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 
-const Happymealbf = () => {
+const Order = () => {
     return (
         <View style={{
             flex: 1,
@@ -205,4 +205,4 @@ const Happymealbf = () => {
     );
 }
 
-export default Happymealbf;
+export default Order;

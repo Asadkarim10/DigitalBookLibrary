@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
-const Placeorder = () => {
+const Cart = () => {
     return (
         <View style={{
             flex: 1,
@@ -342,4 +342,4 @@ elevation: 2,
     );
 }
 
-export default Placeorder;
+export default Cart;

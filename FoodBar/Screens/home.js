@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, TextInput, View, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -6,7 +6,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
-const Home = () => {
+const Home = (props) => {
+    const [count, setCount] = useState(0);
+
+
     return (
         <View style={{
             flex: 1,
@@ -147,9 +150,9 @@ const Home = () => {
     justifyContent:'center',
     flexDirection:'row'
 }}>
-
+<TouchableOpacity onPress={() => setCount(count - 1)}>
 <AntDesign name="minus" size={30} color="#19d956" />
-
+</TouchableOpacity>
 </View>  
 
 <View style = {{
@@ -165,7 +168,7 @@ const Home = () => {
 
 <Text style = {{
     fontSize:20
-}}>1</Text>
+}}>{count}</Text>
 
 
 </View>  
@@ -183,8 +186,9 @@ const Home = () => {
     flexDirection:'row'
 }}>
 
+<TouchableOpacity onPress={() => setCount(count + 1)} >
 <AntDesign name="plus" size={30} color="#19d956" />
-
+</TouchableOpacity>
 
 </View>           
 </View>
@@ -198,7 +202,7 @@ const Home = () => {
             justifyContent:'flex-end'
 
         }}>
-<TouchableOpacity>
+<TouchableOpacity onPress={() => props.navigation.navigate('trackorder')}  > 
                 <View style = {{
                     backgroundColor:'#f06625',
                     height:50,

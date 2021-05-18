@@ -8,7 +8,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 
 import SwiperComponent from './imgSwipper'
-const HappyMeal = () => {
+
+const Food = () => {
     return (
 
         <View style={{
@@ -233,8 +234,29 @@ const HappyMeal = () => {
     </View>
 
             </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         </View>
     );
 }
 
-export default HappyMeal;
+export default Food;
