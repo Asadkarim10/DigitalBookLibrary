@@ -15,7 +15,7 @@ const Trackorder = () => {
     
     <View style = {{
         flex:1.5,
-        
+        paddingRight:15,
         padding:10,
         flexDirection:'row',
         justifyContent:'space-between',
@@ -37,8 +37,8 @@ const Trackorder = () => {
     </View>
 
     <View style = {{
-        flex:3.5,
-        justifyContent:'center'
+        flex:3,
+        justifyContent:'flex-end'
         
     }}>
 
@@ -58,16 +58,110 @@ const Trackorder = () => {
 
 
         </View>
+
+        <View style = {{
+            height:40,
+            alignItems:'center',
+            flexDirection:'row',
+            alignSelf:'center'
+        }}>
+            <Text style = {{
+            color:'#d4d4d6',
+            fontWeight:'800',
+            fontSize:15
+            }}>Your order has been placed.Refrence # 3582</Text>
+        </View>
         
         </View>
 
         
     <View style = {{
         flex:5,
-        
+
     }}>
-        
+
+<TouchableOpacity>
+        <View style = {{
+            width:wp('90%'),
+            height:60,
+            borderRadius:5,
+            alignSelf:'center',
+            justifyContent:'center',
+            flexDirection:'row',
+            alignItems:'center',
+            backgroundColor:'#f06625',
+        }}>
+            <Text style = {{
+                color:'white',
+                fontWeight:'600',
+                fontSize:20
+            }}>TRACK ORDER</Text>
+
         </View>
+        </TouchableOpacity>
+
+
+        <View style = {{
+            alignSelf:'center',
+            alignItems:'center',
+            flexDirection:'row',
+            marginTop:10,
+        }}>
+
+            
+        <View
+  style={{
+      width:wp("35%"),
+    borderBottomColor: '#e3e3e3',
+    borderBottomWidth: 1,
+  }}
+/>
+
+<View style = {{
+    height:20,
+    width:wp('15%'),
+    borderWidth:1,
+    borderColor:'#f3f3f3',
+    backgroundColor:'white'
+}}>
+    <Text style = {{
+        alignSelf:'center',
+        fontWeight:'bold',
+        paddingTop:-5,
+        fontSize:17,
+        
+    }}>Or</Text>
+</View>
+
+<View
+  style={{
+    width:wp("35%"),
+    borderBottomColor: '#e3e3e3',
+    borderBottomWidth: 1,
+  }}
+/>
+            </View>     
+
+<View style = {{
+height:100,
+flexDirection:'row',
+alignItems:'center',
+justifyContent:"center"
+}}>
+    <TouchableOpacity>
+    <Text style = {{
+        color:'#f06625',
+        fontWeight:"700",
+        fontSize:16
+    }}>
+        BACK TO HOME
+    </Text>
+    </TouchableOpacity>
+</View>
+
+
+        </View>
+
 
     </View>
   );
