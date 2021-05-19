@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
-const Cart = () => {
+const Cart = (props) => {
     return (
         <View style={{
             flex: 1,
@@ -20,7 +20,7 @@ const Cart = () => {
 
 <ImageBackground source={require('../Assets/bf.jpg')} style={{width: '100%', height: 180}}>
    <View style={{position: 'absolute', top: -120, left: -350, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
-  <TouchableOpacity>
+  <TouchableOpacity onPress={() => goBack()} >
    <Ionicons name="arrow-back" size={30} color="black" />
    </TouchableOpacity>
    </View>
