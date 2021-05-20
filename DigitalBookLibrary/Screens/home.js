@@ -155,7 +155,7 @@ borderRadius:10,
             <Text style = {{
             color:'red'
             }}>
-            ViewAll
+            View All
             </Text>
             </TouchableOpacity>
             </View>
