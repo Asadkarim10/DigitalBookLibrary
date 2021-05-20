@@ -1,15 +1,31 @@
-import React from 'react';
+import React , {useEffect, useState} from 'react';
 import {TouchableOpacity, AppRegistry,Image, StyleSheet, Text, View } from 'react-native'
 import { widthPercentageToDP } from 'react-native-responsive-screen' 
 import Swiper from 'react-native-swiper'
 
+
+// const books = "www.suretostop.com/BookLibrary"
+// const [data, setData ] = useState=('');
+
+
+
+
 const SwiperComponent = (props) => {
+
+
+
+  // useEffect(() => {
+  //   fetch(books)
+  //     .then((response) => response.json())
+  //     .then((json) => setData(json.books))
+  //     .catch((error) => console.error(error))
+  // }, []);
+
+
+
   return (
-    
     <View style = {{
-      height:200,
-      
-  }}>
+      height:200}}>
 <Swiper  showsButtons={true}  >
   <View style={styles.slide1}>
 <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
