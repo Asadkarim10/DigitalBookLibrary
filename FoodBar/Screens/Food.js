@@ -11,7 +11,6 @@ import SwiperComponent from './imgSwipper'
 
 const Food = () => {
     return (
-
         <View style={{
             flex: 1,
             backgroundColor: 'white'
@@ -21,7 +20,7 @@ const Food = () => {
                 width: wp('98%'),
                 alignSelf: 'center',
                 backgroundColor: 'white',
-                flex: .5,
+                flex: .3,
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between'
@@ -52,17 +51,16 @@ const Food = () => {
 
 
             <View style={{
-                flex: 2,
+                flex: 1.5,
             }}>
-
                 <SwiperComponent />
-
             </View>
 
             <View style={{
-                flex: 4,
-                backgroundColor: "white"
+                flex: 2, 
             }}>
+
+            <ScrollView>
 
                 <View style={{
                     height: 90,
@@ -70,7 +68,8 @@ const Food = () => {
                     width: wp('92%'),
                     alignSelf: 'center',
                     backgroundColor: 'white',
-                    flexDirection: 'row'    }}>
+                    flexDirection: 'row'
+                }}>
 
                     <View style={{
 
@@ -119,7 +118,8 @@ const Food = () => {
                     width: wp('92%'),
                     alignSelf: 'center',
                     backgroundColor: 'white',
-                    flexDirection: 'row'    }}>
+                    flexDirection: 'row'
+                }}>
 
                     <View style={{
 
@@ -166,12 +166,10 @@ const Food = () => {
                     width: wp('92%'),
                     alignSelf: 'center',
                     backgroundColor: 'white',
-                    flexDirection: 'row'    }}>
+                    flexDirection: 'row'
+                }}>
 
-                    <View style={{
-
-                    }}>
-
+                    <View>
                         <Image style={{ width: wp('18%'), height: 70, borderRadius: 5 }}
                             source={require('../Assets/bf.jpg')} />
                     </View>
@@ -196,7 +194,7 @@ const Food = () => {
                         <View style={{
                             marginTop: 2,
                             marginLeft: 5,
-                            height:'auto'
+                            height: 'auto'
                         }}>
                             <Text style={{
                                 color: '#949494',
@@ -206,55 +204,34 @@ const Food = () => {
 
                     </View>
                 </View>
-
-    <View style = {{
-        height:100,
-        alignItems:'center',
-        flexDirection:'row',
-        justifyContent:'center'
-    }}>
-        <TouchableOpacity style = {{
-            width:wp('30%'),
-            height:40,
-            borderRadius:18,
-            flexDirection:'row',
-            alignContent:'center',
-            alignItems:'center',
-            justifyContent:'center',
-            backgroundColor:'#5d8fd4'
-        }}>
-            
-        <MaterialIcons name="restaurant" size={25} color="white" />
-        <Text style = {{
-            color:'white',
-            fontSize:16,
-            marginLeft:5
-        }}>Menu</Text>
-        </TouchableOpacity>
-    </View>
-
+                </ScrollView>
+                <View style={{
+                    height: 100,
+                    flex:2,
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+                }}>
+                    <TouchableOpacity style={{
+                        width: wp('30%'),
+                        height: 40,
+                        borderRadius: 18,
+                        flexDirection: 'row',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#5d8fd4'
+                    }}>
+                        <MaterialIcons name="restaurant" size={25} color="white" />
+                        <Text style={{
+                            color: 'white',
+                            fontSize: 16,
+                            marginLeft: 5
+                        }}>Menu</Text>
+                    </TouchableOpacity>
+                </View>
+                
             </View>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
         </View>
     );
 }

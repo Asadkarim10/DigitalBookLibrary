@@ -36,13 +36,12 @@ export default class SwiperComponent extends Component {
   render(props) {
     return (
         <View style = {{
-            height:280,
-            
+          flex:2            
         }}>
       <Swiper    >
         <View style={styles.slide1}>
       <TouchableOpacity > 
-       <Image style = {{ width:400, height:300}} source={require('../Assets/bf.jpg')}/>
+       <Image style = {{ width:412, height:312}} source={require('../Assets/bf.jpg')}/>
      </TouchableOpacity>  
         
         </View>

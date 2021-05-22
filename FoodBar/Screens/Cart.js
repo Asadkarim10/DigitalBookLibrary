@@ -20,7 +20,7 @@ const Cart = (props) => {
 
 <ImageBackground source={require('../Assets/bf.jpg')} style={{width: '100%', height: 180}}>
    <View style={{position: 'absolute', top: -120, left: -350, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
-  <TouchableOpacity onPress={() => goBack()} >
+  <TouchableOpacity  >
    <Ionicons name="arrow-back" size={30} color="black" />
    </TouchableOpacity>
    </View>

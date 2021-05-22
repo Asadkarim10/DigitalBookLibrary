@@ -32,6 +32,77 @@ Stack.Navigator.defaultProps = {
   headerMode: 'none',
 };
 
+const Tab = createBottomTabNavigator();
+
+
+ function App() {
+  return (
+    <NavigationContainer >
+      <Tab.Navigator 
+      initialRouteName="signin"
+        tabBarOptions={{
+        activeTintColor: '#ff5603', 
+
+        labelStyle: { textTransform: "none", fontSize: 11, marginBottom:5 , fontWeight: "bold" },
+        style: {
+          
+          justifyContent:'center',
+        },
+      }}>
+        
+        <Tab.Screen name="Food" 
+        component={Food}
+          options={{
+            tabBarLabel: 'Food',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="restaurant-menu" color={color} style = {{ marginBottom:-5  }} size={size} />
+            ),}}/>
+        
+  
+        <Tab.Screen name="home"
+         component={Home} 
+         options={{
+          tabBarLabel: 'Reviews',
+          tabBarVisible: false,
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons    name="star" color={color} size={size} style = {{ marginBottom:-5  }} />) }}/>
+
+
+<Tab.Screen name="Order"
+         component={Order} 
+         options={{
+          tabBarLabel: 'Order',
+          tabBarVisible: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons  name="reorder-three" color={color} size={size} style = {{ marginBottom:-5  }} />
+          )
+        }}/>
+
+
+<Tab.Screen name="signin"
+         component={Signin} 
+         options={{
+          tabBarVisible: false,
+          tabBarLabel: 'you',
+          tabBarIcon: ({ color, size }) => (
+            <Entypo   name="user" color={color} size={size} style = {{ marginBottom:-5  }} />
+          )
+        }}/>        
+
+
+<Tab.Screen name="Cart"
+         component={Cart} 
+         options={{
+          tabBarLabel: 'Cart',
+          tabBarVisible: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons  name="cart" color={color} size={size} style = {{ marginBottom:-5  }} />
+          )
+        }}/>
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
 
 function MyStack() {
   return (
@@ -57,7 +128,7 @@ const SettingStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
  
- <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="Food" component={Food} />
         <Stack.Screen name="Order" component={Order} />
       <Stack.Screen name="Cart" component={Cart} />
@@ -69,82 +140,7 @@ const SettingStackNavigator = () => {
 }
 
 
-
-const Tab = createBottomTabNavigator();
-
-
- function App() {
-  return (
-    <NavigationContainer >
-      <Tab.Navigator 
-      initialRouteName="signin"
-        tabBarOptions={{
-        activeTintColor: '#ff5603',
-        labelStyle: { textTransform: "none", fontSize: 13, fontWeight: "bold" },
-        style: {
-
-        },
-      }}>
-        
-        <Tab.Screen name="Food" 
-        component={Food}
-          options={{
-            tabBarLabel: 'Food',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="restaurant-menu" color={color} size={size} />
-            ),}}/>
-        
-  
-        <Tab.Screen name="home"
-         component={Home} 
-         options={{
-          tabBarLabel: 'Reviews',
-          tabBarVisible: false,
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons    name="star" color={color} size={size} />) }}/>
-
-
-<Tab.Screen name="Order"
-         component={Order} 
-         options={{
-          tabBarLabel: 'Order',
-          tabBarVisible: false,
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons  name="reorder-three" color={color} size={size} />
-          )
-        }}/>
-
-
-<Tab.Screen name="signin"
-         component={Signin} 
-         options={{
-          tabBarVisible: false,
-          tabBarLabel: 'you',
-          tabBarIcon: ({ color, size }) => (
-            <Entypo   name="user" color={color} size={size} />
-          )
-        }}/>        
-
-
-<Tab.Screen name="Cart"
-         component={Cart} 
-         options={{
-          tabBarLabel: 'Cart',
-          tabBarVisible: false,
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons  name="cart" color={color} size={size} />
-          )
-        }}/>
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
-
-
-
-
 export default App;
-
 
 
 
