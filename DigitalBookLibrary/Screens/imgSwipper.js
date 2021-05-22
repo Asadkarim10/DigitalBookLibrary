@@ -4,33 +4,37 @@ import { widthPercentageToDP } from 'react-native-responsive-screen'
 import Swiper from 'react-native-swiper'
 
 
-// const books = "www.suretostop.com/BookLibrary"
-// const [data, setData ] = useState=('');
-
 
 
 
 const SwiperComponent = (props) => {
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]
+    );
 
-
-
-  // useEffect(() => {
-  //   fetch(books)
-  //     .then((response) => response.json())
-  //     .then((json) => setData(json.books))
-  //     .catch((error) => console.error(error))
-  // }, []);
-
+  useEffect(() => {
+    fetch('https://suretostop.com/BookLibrary/getbooks')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
+  }, []);
 
 
   return (
+
+    
     <View style = {{
       height:200}}>
-<Swiper  showsButtons={true}  >
+        
+<Swiper  showsButtons={true}    >
   <View style={styles.slide1}>
-<TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
- <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    
+<TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")} > 
+ <Image style = {{ width:80, height:150 ,  marginLeft:10,}} alt="image" source={require('../Assets/book.jpg')} 
+   />
 </TouchableOpacity>  
+
 
 
 <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 

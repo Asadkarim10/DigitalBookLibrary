@@ -1,49 +1,151 @@
-import React from 'react';
-import { View, KeyboardAvoidingView, TextInput, StyleSheet, Text, Platform, TouchableWithoutFeedback, Button, Keyboard  } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator,TouchableOpacity,Image, FlatList, Text, View, StyleSheet } from 'react-native';
+import Swiper from 'react-native-swiper'
 
-const KeyboardA = () => {
+
+export default App = () => {
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://suretostop.com/BookLibrary/getbooks')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
+  }, []);
+
+  console.log({data})
+
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-     style={styles.container}
-    >
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.inner}>
-          <Text style={styles.header}>Header</Text>
-          <TextInput placeholder="Username" style={styles.textInput} />
-          <View style={styles.btnContainer}>
-            <Button title="Submit" onPress={() => null} />
-          </View>
+
+    
+    <View style={{ flex: 1 }}>
+      
+
+{/* 
+      <Swiper  showsButtons={true}     >
+         <FlatList style = {{ }}
+          data={data}
+          keyExtractor={({ id }, index) => id}
+          renderItem={({ item }) => (
+            <View>
+            <Text>{item.id}</Text>
+            <Text>{item.author}</Text>
+            <Text>{item.description}</Text>
+            </View>
+          )}
+        /> 
+
+<View style={styles.slide1}>
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")} > 
+     <Image style = {{ width:80, height:150 ,  marginLeft:10,}} alt="image" source={require('../Assets/book.jpg')} 
+       />
+    </TouchableOpacity>  
+    
+    
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>  
+      
+      
+      
+      </View>
+      <View style={styles.slide2}>
+      <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>  
+    
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>
+      </View>
+      <View style={styles.slide3}>
+      <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>  
+    
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>
+    
+    <TouchableOpacity onPress={() => props.navigation.navigate("Bookdetails")}> 
+     <Image style = {{ width:80, height:150 , marginLeft:10,}} source={require('../Assets/book.jpg')}/>
+    </TouchableOpacity>
+      </View>
+
+  </Swiper>     */}
+
+
+<Swiper autoplay={true} loop={true} style={styles.wrapper} showsButtons={true}>
+
+{data.map((data) => {
+    return(
+      <View style = {{
+        flex:1
+      }}>
+        <View style={styles.slide3}>
+            <View style = {{
+              flexDirection:'column',
+              justifyContent:'center'
+            }}>
+            <Image style = {{
+              height:150,
+              width:150}}  
+              source={{ uri: data.book_image}}/>
+              <Text>{data.author}</Text>
+              </View>
         </View>
-      </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+        </View>
+        
+    );
+})}
+</Swiper>
+
+
+
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor:'yellow'
-  },
-  inner: {
-    padding: 24,
-    flex: 1,
-    justifyContent: "space-around"
-  },
-  header: {
-    fontSize: 36,
-    marginBottom: 48
-  },
-  textInput: {
-    height: 40,
-    borderColor: "#000000",
-    borderBottomWidth: 1,
-    marginBottom: 36
-  },
-  btnContainer: {
-    backgroundColor: "white",
-    marginTop: 12
-  }
-});
+  wrapper: { 
+  
+   },
 
-export default KeyboardA;
+buttonWrapperStyle : {
+    backgroundColor: 'transparent', flexDirection: 'row', position: 'absolute', top: 0, left: 0, flex: 1, paddingHorizontal: 10, paddingVertical: 10, justifyContent: 'space-between', alignItems: 'center'},
+
+  slide1: {
+    flex:1,
+    justifyContent: 'center',
+    flexDirection:"row",
+    alignItems: 'center',
+   
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection:"row",
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection:"row"
+  },
+})
+

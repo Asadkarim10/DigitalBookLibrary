@@ -269,14 +269,7 @@ name="lock" size={25} color="#767678" />
           }}> Sign Up </Text>
         </TouchableOpacity>
       </View>
-
-
       </KeyboardAvoidingView>
-
-
-
-
-
   );
 }
 
