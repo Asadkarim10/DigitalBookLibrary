@@ -1,9 +1,18 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text,View } from 'react-native';
 
 const Home = () => {
   return (
-    <Text>Hello, I am your cat!</Text>
+    <View style = {{flex:1 , backgroundColor:'yellow'}}>
+
+    
+
+    </View>
+     
+   
+
+
+
   );
 }
 
