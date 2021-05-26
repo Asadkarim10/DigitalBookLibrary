@@ -130,7 +130,10 @@ style={{height:200,width:wp('100%')}} >
             alignItems:'flex-end',
             justifyContent:'space-around'
         }}>
-            <Text> Chicken Seekh Kabab</Text>
+            <Text style = {{
+                fontSize:15,
+                fontWeight:'700'
+            }}> Chicken Seekh Kabab</Text>
             <TouchableOpacity>
             <AntDesign name="staro" size={25} color="#121212" />
             </TouchableOpacity>
@@ -150,17 +153,22 @@ style={{height:200,width:wp('100%')}} >
         }}>   
                <View style = {{
             flexDirection:'row',
-            justifyContent:'space-around'
+            justifyContent:'space-around',
+            alignItems:'center'
         }}>
-            <Text>Rs 600</Text>
+            <Text style = {{
+                fontSize:15,
+                fontWeight:'700'
+            }}>Rs 600</Text>
             
           <View>
             <TouchableOpacity style = {{
-              width:wp('17%'),
+              width:wp('20%'),
               justifyContent:'center',
               alignItems:'center',
               flexDirection:'row',
-              height:35,
+              height:30,
+              marginLeft:40,
               borderRadius:10,
               backgroundColor:'#f90000'
                           }}>
