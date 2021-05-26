@@ -196,10 +196,6 @@ const Address = () => {
             marginLeft: 17
           }} >PWD,Rawalpindi</Text>
         </View>
-
-
-
-
       </View>
 
       <View style={{
