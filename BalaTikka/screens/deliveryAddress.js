@@ -53,10 +53,7 @@ const DeliveryAddress = () => {
   style = {{
     fontSize:20
   }}
-  />
-
-  
-
+  />  
 </View>
 
 <View style = {{
