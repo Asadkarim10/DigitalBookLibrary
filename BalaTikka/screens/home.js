@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text,View,ImageBackground,Image,TouchableOpacity } from 'react-native';
+import {Text,View,ImageBackground,Image,TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';

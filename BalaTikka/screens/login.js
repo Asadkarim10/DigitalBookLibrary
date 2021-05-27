@@ -5,7 +5,7 @@ import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 
 
-const Login = () => {
+const Login = (props) => {
     return (
         <View style={{
             flex: 1,
@@ -43,7 +43,10 @@ justifyContent:'center'
                     borderRadius: 5,
                     borderWidth: 1
                 }}>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity 
+                    
+                    
+                    style={{
                         flexDirection: 'row',
                         alignItems:'center',
                         width:wp('65'),
@@ -70,7 +73,9 @@ justifyContent:'center'
 
 
 
-                <TouchableOpacity style={{
+                <TouchableOpacity 
+                onPress={() => props.navigation.navigate('signup')}
+                style={{
                     width: wp('80%'),
                     height: 45,
                     justifyContent: 'center',
@@ -93,7 +98,11 @@ justifyContent:'center'
                 </TouchableOpacity>
 
 
-                <TouchableOpacity style={{
+                <TouchableOpacity 
+                              onPress={() => props.navigation.navigate('Itemlist')}
+
+                
+                style={{
                     width: wp('80%'),
                     height: 45,
                     marginTop: 15,
@@ -122,7 +131,7 @@ justifyContent:'center'
                     height: 50,
                     justifyContent: 'flex-end'
                 }}>
-                    <TouchableOpacity>
+                    <TouchableOpacity   onPress={() => props.navigation.navigate('home')}  >
                         <Text style={{
                             fontSize: 17,
                             color: '#999999',

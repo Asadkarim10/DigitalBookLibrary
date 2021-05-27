@@ -9,7 +9,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Entypo from 'react-native-vector-icons/Entypo';
 
 
-const UserDetails = () => {
+const UserDetails = (props) => {
     return (
         <View style={{
             flex: 1,
@@ -90,7 +90,10 @@ const UserDetails = () => {
                     <View style={{
                         alignItems: 'center'
                     }}>
+                       <TouchableOpacity  onPress={() => props.navigation.navigate('Delivery')}
+   >
                         <Ionicons name="caret-forward" size={23} color="#717171" />
+                        </TouchableOpacity>
                     </View>
                 </View>
 
@@ -121,7 +124,11 @@ const UserDetails = () => {
                     <View style={{
                         alignItems: 'center'
                     }}>
+
+                        <TouchableOpacity  onPress={() => props.navigation.navigate('deliveryAddress')}
+   >
                         <Ionicons name="caret-forward" size={23} color="#717171" />
+                        </TouchableOpacity>
                     </View>
                 </View>
 
@@ -213,8 +220,9 @@ const UserDetails = () => {
                         <Text style={{
                             color: '#5a5a5a',
                             fontSize: 20,
-                            marginLeft: 7
-                        }}>Delivering Address</Text>
+                            marginLeft: 7,
+                            fontWeight:'300'
+                        }}>Logout</Text>
                     </View>
                     <View style={{
                         alignItems: 'center'
